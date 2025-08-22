@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Template de Cartinha</title>
+    <link rel="stylesheet" href="style.da.carta.css" type="text/css">
+</head>
+<body>
+
+    <!-- Conteúdo da cartinha (visível desde o início) -->
+    <div id="cartinhaConteudo">
+
+        <!-- Capa da cartinha -->
+        <header class="capa">
+            <h1>Título da Cartinha:</h1>
+            <input type="text" id="titulo" placeholder="Escreva o título aqui">
+
+            <p>De:</p>
+            <input type="text" id="remetente" placeholder="Seu nome">
+
+            <div class="foto-capa">
+                <p>Foto de capa:</p>
+                <input type="file" id="fotoCapa" accept="image/*">
+            </div>
+        </header>
+
+        <!-- Seção de momentos especiais -->
+        <section class="momentos">
+            <h2>Momentos especiais</h2>
+
+            <div class="momento">
+                <p>Momento 1:</p>
+                <input type="text" id="momento1" placeholder="Descreva o momento 1">
+                <input type="file" id="foto1" accept="image/*">
+            </div>
+
+            <div class="momento">
+                <p>Momento 2:</p>
+                <input type="text" id="momento2" placeholder="Descreva o momento 2">
+                <input type="file" id="foto2" accept="image/*">
+            </div>
+
+            <div class="momento">
+                <p>Momento 3:</p>
+                <input type="text" id="momento3" placeholder="Descreva o momento 3">
+                <input type="file" id="foto3" accept="image/*">
+            </div>
+
+            <div class="momento">
+                <p>Momento 4:</p>
+                <input type="text" id="momento4" placeholder="Descreva o momento 4">
+                <input type="file" id="foto4" accept="image/*">
+            </div>
+
+            <div class="momento">
+                <p>Momento 5:</p>
+                <input type="text" id="momento5" placeholder="Descreva o momento 5">
+                <input type="file" id="foto5" accept="image/*">
+            </div>
+        </section>
+
+        <!-- Contagem regressiva -->
+        <section class="contagem">
+            <h2>Data do aniversário:</h2>
+            <input type="date" id="dataAniversario">
+            <p>Faltam <span id="dias">0</span> dias!</p>
+        </section>
+
+        <!-- Música -->
+        <section class="musica">
+            <h2>Música da cartinha</h2>
+
+            <p>Escolher arquivo MP3 local:</p>
+            <input type="file" id="musicaArquivo" accept="audio/*">
+
+            <p>Ou colocar link direto de MP3:</p>
+            <input type="text" id="musicaLink" placeholder="Cole o link do MP3 aqui">
+            <button id="carregarMusica">Carregar música</button>
+
+            <p>Ou incorporar vídeo do YouTube:</p>
+            <input type="text" id="youtubeLink" placeholder="Cole o link do vídeo">
+            <button id="carregarYoutube">Incorporar YouTube</button>
+
+            <audio id="musica" controls></audio>
+            <div id="youtubeContainer"></div>
+        </section>
+
+        <!-- Seção de senha (aparece no final) -->
+        <section id="senhaSection">
+            <h2>Finalize sua cartinha com a senha</h2>
+            <input type="text" id="senhaInput" placeholder="Digite a senha aqui">
+            <button id="verificarSenha">Confirmar senha</button>
+            <p>Dica: <span id="dicaSenha"> Um local importante ou um jogo</span></span></p>
+        </section>
+
+        <!-- Botão de enviar (apenas funciona após senha correta) -->
+        <section class="enviar">
+            <button id="enviarCarta">Enviar Cartinha</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
